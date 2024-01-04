@@ -1,0 +1,205 @@
+@charset 'uft-8';
+@font-face {
+    font-family: 'SejonghospitalBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+:root {
+    font-family: 'SejonghospitalBold';
+    font-size: 10px;
+    --max_width: 1280px;
+}
+.mw {
+    max-width: var(--max-w);
+    width: calc(100% - 4rem);
+    margin: auto;
+    border: 1px solid black;
+}
+.hd {
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 200, 0);
+    border-bottom: 3px solid black;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+.hd .img {
+    width: 7rem;
+}
+.hd img {
+    width: 100%;
+}
+.hd i svg {
+    margin: 2rem;
+    width: 25px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+.hd input {
+    width: 50vw;
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    transform: translateY(-80%);
+}
+
+main {
+    height: 100vh;
+}
+.hd strong {
+    font-size: 3rem;
+    position: absolute;
+    z-index: 2;
+    color: goldenrod;
+    text-shadow: 1px 1px black;
+    transform: translateY(-50%);
+}
+main .active {
+    background-image: url(../../public/img/8116.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+main i svg {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    background-color: white;
+}
+main input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 60vw;
+}
+main span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main .active > div {
+    position: absolute;
+    font-size: 2rem;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.options {
+    padding: 1rem;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+}
+.options select {
+    padding: 0.5rem;
+}
+.data {
+    border: 1px solid white;
+    display: flex;
+    font-size: 2rem;
+}
+.data > * {
+    padding: 1rem;
+}
+.data .info {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.data .addr {
+    width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.data a {
+    height: 40px;
+}
+.data .info,
+.data .addr,
+.detail a,
+.detail .kname,
+.detail .addr {
+    background-color: rgba(255, 200, 0);
+}
+.data .date {
+    background-color: rgb(252, 241, 228);
+    width: 10%;
+}
+.detail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+.detail > * {
+    padding: 1rem;
+}
+.detail .kname {
+    font-size: 3rem;
+}
+
+.data > a,
+.detail span,
+.detail .info,
+.detail .name,
+.detail .a1 {
+    background-color: rgb(252, 241, 228);
+}
+.detail .kname,
+.detail .name,
+.detail .addr,
+.detail .a1 {
+    grid-column: 1/4;
+}
+.detail .name,
+.detail .addr,
+.detail .a1,
+.detail span,
+.detail .info {
+    font-size: 1.5rem;
+}
+.detail a {
+    grid-column: 4/5;
+    grid-row: 2/4;
+    width: auto;
+    padding: 1rem;
+}
+.null {
+    height: 100px;
+}
+@media (max-width: 800px) {
+    .data .date {
+        display: none;
+    }
+    .data .addr {
+        background-color: rgb(252, 241, 228);
+    }
+    .data > a {
+        background-color: rgba(255, 200, 0);
+    }
+    .hd input {
+        font-size: 1.5rem;
+        width: 40vw;
+    }
+    .hd i svg {
+        margin: 0.5rem;
+    }
+    .detail .addr a {
+        width: 100%;
+        height: 100%;
+    }
+}
