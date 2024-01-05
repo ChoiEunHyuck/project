@@ -12,7 +12,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="/" element={<Main />} />
-                    <Route path="/find" element={<Find allData={allData} />} />
                     <Route path="/detail/:id" element={<Detail />} />
                 </Route>
                 <Route path="*" element={<>404 요청한 페이지가 존재하지 않습니다</>} />

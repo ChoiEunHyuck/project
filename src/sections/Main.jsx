@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Find from '../pages/Find';
 
 const find = (
     <svg xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 512 512">
@@ -22,25 +23,8 @@ export default function Main() {
         setRoute(document.getElementById('text').value);
     };
     return (
-        <main>
-            <Swiper className="mySwiper">
-                <SwiperSlide>
-                    <div className="active">
-                        <input type="text" placeholder="작품의 이름을 입력해주세요" id="text" onChange={inputF} />
-                        <Link to={`/detail/${route}`}>
-                            <i>{find}</i>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="active">
-                        <Link to={'/find'}>
-                            <span className="book">{book}</span>
-                        </Link>
-                        <div>직접찾기</div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </main>
+        <>
+            <Find />
+        </>
     );
 }

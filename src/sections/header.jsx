@@ -22,7 +22,7 @@ export default function Header() {
                 <strong>
                     Seoul
                     <br />
-                    Of Statue
+                    Of Beauty
                 </strong>
             </Link>
 
@@ -30,10 +30,6 @@ export default function Header() {
                 <input type="text" placeholder="작품의 이름을 입력해주세요" id="text" onChange={inputF} />
                 <Link to={`/detail/${route}`}>
                     <i>{find}</i>
-                </Link>
-
-                <Link to={'/find'}>
-                    <i className="">{book}</i>
                 </Link>
             </div>
         </header>
